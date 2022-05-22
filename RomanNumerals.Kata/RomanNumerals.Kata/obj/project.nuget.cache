@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Gcqo0qWcKZu0aGBm0neVKQR72KsMmrwfOVQD/9aq0QA3QwPJCUQ9hpmTF/cI98ppfqkKwUbfF5QdCeJ6quu+5A==",
+  "dgSpecHash": "yQPajCpuTT0fzvduoQaEDAqwuApY7Mn2Tly5wQZ7WRubyHD5Sj1aDht+LJju7l7X264kqFkFpOrb3ZbvdRV2MA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ralph\\source\\repos\\CodeKatas\\RomanNumerals\\Ralph\\RomanNumerals.Kata\\RomanNumerals.Kata\\RomanNumerals.Kata.csproj",
+  "projectFilePath": "C:\\Users\\ralph\\source\\repos\\MyExercises\\CodingExercises\\RomanNumerals.Kata\\RomanNumerals.Kata\\RomanNumerals.Kata.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ralph\\.nuget\\packages\\coverlet.collector\\3.1.0\\coverlet.collector.3.1.0.nupkg.sha512",
     "C:\\Users\\ralph\\.nuget\\packages\\microsoft.codecoverage\\16.11.0\\microsoft.codecoverage.16.11.0.nupkg.sha512",

@@ -237,45 +237,45 @@ namespace RomanNumerals.Kata
             StringBuilder romanNumeralBuilder = new StringBuilder();
             string[] numerals;
 
-            if (numberToConvert >= 100 && numberToConvert <= 1000)
+            if (numberToConvert >= 100 && numberToConvert < 1000)
             {
                 numerals = new string[] { "C", "CD", "D", "CM" };
-                numberToConvert = ConvertMultipleDigitsToNumeral(numberToConvert, 100, numerals, romanNumeralBuilder);
+                numberToConvert = ConvertFirstDigitToNumeral(numberToConvert, 100, numerals, romanNumeralBuilder);
             }
 
             if (numberToConvert >= 10 && numberToConvert < 100)
             {
                 numerals = new string[] { "X", "XL", "L", "XC" };
-                numberToConvert = ConvertMultipleDigitsToNumeral(numberToConvert, 10, numerals, romanNumeralBuilder);
+                numberToConvert = ConvertFirstDigitToNumeral(numberToConvert, 10, numerals, romanNumeralBuilder);
             }
 
-            if (numberToConvert != 0)
+            if (numberToConvert >= 1 && numberToConvert < 10)
             {
                 numerals = new string[] { "I", "IV", "V", "IX" };
-                ConvertSingleDigitsToNumeral(numberToConvert, numerals, romanNumeralBuilder);
+                ConvertDigitToNumeral(numberToConvert, numerals, romanNumeralBuilder);
             }
 
             return romanNumeralBuilder.ToString();
         }
 
-        public int ConvertMultipleDigitsToNumeral(int numberToConvert, int divider, string[] numerals, StringBuilder romanNumeralBuilder)
+        public int ConvertFirstDigitToNumeral(int numberToConvert, int divider, string[] numerals, StringBuilder romanNumeralBuilder)
         {
             int firstDigit = numberToConvert / divider;
             int remainingDigits = numberToConvert % divider;
 
-            ConvertSingleDigitsToNumeral(firstDigit, numerals, romanNumeralBuilder);
+            ConvertDigitToNumeral(firstDigit, numerals, romanNumeralBuilder);
 
             return remainingDigits;
         }
 
-        public void ConvertSingleDigitsToNumeral(int firstDigit, string[] numerals, StringBuilder romanNumeralBuilder)
+        public void ConvertDigitToNumeral(int numberToConvert, string[] numerals, StringBuilder romanNumeralBuilder)
         {
-            switch (firstDigit)
+            switch (numberToConvert)
             {
                 case 1:
                 case 2:
                 case 3:
-                    AddNumeral(0, firstDigit, numerals[0], romanNumeralBuilder);
+                    AppendNumeral(0, numberToConvert, numerals[0], romanNumeralBuilder);
                     break;
                 case 4:
                     romanNumeralBuilder.Append(numerals[1]);
@@ -287,7 +287,7 @@ namespace RomanNumerals.Kata
                 case 7:
                 case 8:
                     romanNumeralBuilder.Append(numerals[2]);
-                    AddNumeral(5, firstDigit, numerals[0], romanNumeralBuilder);
+                    AppendNumeral(5, numberToConvert, numerals[0], romanNumeralBuilder);
                     break;
                 case 9:
                     romanNumeralBuilder.Append(numerals[3]);
@@ -295,9 +295,9 @@ namespace RomanNumerals.Kata
             }
         }
 
-        public void AddNumeral(int startNumber, int firstDigit, string numeral, StringBuilder romanNumeralBuilder)
+        public void AppendNumeral(int startNumber, int numberToConvert, string numeral, StringBuilder romanNumeralBuilder)
         {
-            for (int i = startNumber; i < firstDigit; i++)
+            for (int i = startNumber; i < numberToConvert; i++)
             {
                 romanNumeralBuilder.Append(numeral);
             }

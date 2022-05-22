@@ -3860,11 +3860,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ralph\\source\\repos\\CodeKatas\\RomanNumerals\\Ralph\\RomanNumerals.Kata\\RomanNumerals.Kata\\RomanNumerals.Kata.csproj",
+      "projectUniqueName": "C:\\Users\\ralph\\source\\repos\\MyExercises\\CodingExercises\\RomanNumerals.Kata\\RomanNumerals.Kata\\RomanNumerals.Kata.csproj",
       "projectName": "RomanNumerals.Kata",
-      "projectPath": "C:\\Users\\ralph\\source\\repos\\CodeKatas\\RomanNumerals\\Ralph\\RomanNumerals.Kata\\RomanNumerals.Kata\\RomanNumerals.Kata.csproj",
+      "projectPath": "C:\\Users\\ralph\\source\\repos\\MyExercises\\CodingExercises\\RomanNumerals.Kata\\RomanNumerals.Kata\\RomanNumerals.Kata.csproj",
       "packagesPath": "C:\\Users\\ralph\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ralph\\source\\repos\\CodeKatas\\RomanNumerals\\Ralph\\RomanNumerals.Kata\\RomanNumerals.Kata\\obj\\",
+      "outputPath": "C:\\Users\\ralph\\source\\repos\\MyExercises\\CodingExercises\\RomanNumerals.Kata\\RomanNumerals.Kata\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ralph\\AppData\\Roaming\\NuGet\\NuGet.Config",
