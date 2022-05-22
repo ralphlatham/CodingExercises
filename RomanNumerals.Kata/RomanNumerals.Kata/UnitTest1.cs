@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using System.Linq;
 using System.Text;
 
 namespace RomanNumerals.Kata
@@ -243,13 +244,13 @@ namespace RomanNumerals.Kata
                 numberToConvert = ConvertFirstDigitToNumeral(numberToConvert, 100, numerals, romanNumeralBuilder);
             }
 
-            if (numberToConvert >= 10 && numberToConvert < 100)
+            if (numberToConvert >= 10)
             {
                 numerals = new string[] { "X", "XL", "L", "XC" };
                 numberToConvert = ConvertFirstDigitToNumeral(numberToConvert, 10, numerals, romanNumeralBuilder);
             }
 
-            if (numberToConvert >= 1 && numberToConvert < 10)
+            if (numberToConvert >= 1)
             {
                 numerals = new string[] { "I", "IV", "V", "IX" };
                 ConvertDigitToNumeral(numberToConvert, numerals, romanNumeralBuilder);
@@ -275,7 +276,7 @@ namespace RomanNumerals.Kata
                 case 1:
                 case 2:
                 case 3:
-                    AppendNumeral(0, numberToConvert, numerals[0], romanNumeralBuilder);
+                    romanNumeralBuilder.Append(string.Concat(Enumerable.Repeat(numerals[0], numberToConvert)));
                     break;
                 case 4:
                     romanNumeralBuilder.Append(numerals[1]);
@@ -287,19 +288,11 @@ namespace RomanNumerals.Kata
                 case 7:
                 case 8:
                     romanNumeralBuilder.Append(numerals[2]);
-                    AppendNumeral(5, numberToConvert, numerals[0], romanNumeralBuilder);
+                    romanNumeralBuilder.Append(string.Concat(Enumerable.Repeat(numerals[0], numberToConvert - 5)));
                     break;
                 case 9:
                     romanNumeralBuilder.Append(numerals[3]);
                     break;
-            }
-        }
-
-        public void AppendNumeral(int startNumber, int numberToConvert, string numeral, StringBuilder romanNumeralBuilder)
-        {
-            for (int i = startNumber; i < numberToConvert; i++)
-            {
-                romanNumeralBuilder.Append(numeral);
             }
         }
     }
