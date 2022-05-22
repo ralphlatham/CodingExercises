@@ -237,17 +237,22 @@ namespace RomanNumerals.Kata
         {
             StringBuilder romanNumeralBuilder = new StringBuilder();
             string[] numerals;
+            int firstDigit;
 
             if (numberToConvert >= 100 && numberToConvert < 1000)
             {
                 numerals = new string[] { "C", "CD", "D", "CM" };
-                numberToConvert = ConvertFirstDigitToNumeral(numberToConvert, 100, numerals, romanNumeralBuilder);
+                firstDigit = GetFirstDigit(numberToConvert, 100);
+                ConvertDigitToNumeral(firstDigit, numerals, romanNumeralBuilder);
+                numberToConvert = RemoveFirstDigit(numberToConvert, 100);
             }
 
             if (numberToConvert >= 10)
             {
                 numerals = new string[] { "X", "XL", "L", "XC" };
-                numberToConvert = ConvertFirstDigitToNumeral(numberToConvert, 10, numerals, romanNumeralBuilder);
+                firstDigit = GetFirstDigit(numberToConvert, 10);
+                ConvertDigitToNumeral(firstDigit, numerals, romanNumeralBuilder);
+                numberToConvert = RemoveFirstDigit(numberToConvert, 10);
             }
 
             if (numberToConvert >= 1)
@@ -259,14 +264,14 @@ namespace RomanNumerals.Kata
             return romanNumeralBuilder.ToString();
         }
 
-        public int ConvertFirstDigitToNumeral(int numberToConvert, int divider, string[] numerals, StringBuilder romanNumeralBuilder)
+        public int GetFirstDigit(int numberToConvert, int divider)
         {
-            int firstDigit = numberToConvert / divider;
-            int remainingDigits = numberToConvert % divider;
+            return numberToConvert / divider;
+        }
 
-            ConvertDigitToNumeral(firstDigit, numerals, romanNumeralBuilder);
-
-            return remainingDigits;
+        public int RemoveFirstDigit(int numberToConvert, int divider)
+        {
+            return numberToConvert % divider;
         }
 
         public void ConvertDigitToNumeral(int numberToConvert, string[] numerals, StringBuilder romanNumeralBuilder)
