@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DHShzQsQbNoGca852TlF+Li6zSZjJ3r6wNG9a5Qx8AukjTIS0x0w/y1mqvKM9xyzrGSQxSrz7t67p9I60Wu8Bw==",
+  "dgSpecHash": "/jRwVJ6UwDSmGu1YfRlyFD0SEq/Awz4D20X18UZzAwFWHGOS9ua5pg6xnzdjUhZnveEQl8sgbuN3C6CRendImw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ralph\\source\\repos\\CodeKatas\\BowlingGameRalph\\BowlingGame.Kata\\BowlingGame.Kata.csproj",
+  "projectFilePath": "C:\\Users\\ralph\\source\\repos\\MyExercises\\CodingExercises\\BowlingGameRalph\\BowlingGame.Kata\\BowlingGame.Kata.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ralph\\.nuget\\packages\\coverlet.collector\\3.1.0\\coverlet.collector.3.1.0.nupkg.sha512",
     "C:\\Users\\ralph\\.nuget\\packages\\microsoft.codecoverage\\16.11.0\\microsoft.codecoverage.16.11.0.nupkg.sha512",

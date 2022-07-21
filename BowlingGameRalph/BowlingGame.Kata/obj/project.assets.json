@@ -3860,11 +3860,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ralph\\source\\repos\\CodeKatas\\BowlingGameRalph\\BowlingGame.Kata\\BowlingGame.Kata.csproj",
+      "projectUniqueName": "C:\\Users\\ralph\\source\\repos\\MyExercises\\CodingExercises\\BowlingGameRalph\\BowlingGame.Kata\\BowlingGame.Kata.csproj",
       "projectName": "BowlingGame.Kata",
-      "projectPath": "C:\\Users\\ralph\\source\\repos\\CodeKatas\\BowlingGameRalph\\BowlingGame.Kata\\BowlingGame.Kata.csproj",
+      "projectPath": "C:\\Users\\ralph\\source\\repos\\MyExercises\\CodingExercises\\BowlingGameRalph\\BowlingGame.Kata\\BowlingGame.Kata.csproj",
       "packagesPath": "C:\\Users\\ralph\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ralph\\source\\repos\\CodeKatas\\BowlingGameRalph\\BowlingGame.Kata\\obj\\",
+      "outputPath": "C:\\Users\\ralph\\source\\repos\\MyExercises\\CodingExercises\\BowlingGameRalph\\BowlingGame.Kata\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ralph\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3925,7 +3925,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

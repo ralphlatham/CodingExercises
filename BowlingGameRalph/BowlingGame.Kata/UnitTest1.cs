@@ -18,7 +18,7 @@ namespace BowlingGame.Kata
         {
             ThrowMultipleRolls(20, 0);
 
-            Assert.AreEqual(_game.Score(), 0);
+            Assert.AreEqual(0, _game.Score());
         }
 
         [Test]
@@ -26,7 +26,7 @@ namespace BowlingGame.Kata
         {
             ThrowMultipleRolls(20, 1);
 
-            Assert.AreEqual(_game.Score(), 20);
+            Assert.AreEqual(20, _game.Score());
         }
 
         [Test]
@@ -36,7 +36,7 @@ namespace BowlingGame.Kata
             _game.Roll(5);
             _game.Roll(2);
             ThrowMultipleRolls(17, 0);
-            Assert.AreEqual(_game.Score(), 14);
+            Assert.AreEqual(14, _game.Score());
         }
 
         [Test]
@@ -47,7 +47,7 @@ namespace BowlingGame.Kata
             _game.Roll(8);
             _game.Roll(1);
             ThrowMultipleRolls(16, 0);
-            Assert.AreEqual(_game.Score(), 28);
+            Assert.AreEqual(28, _game.Score());
         }
 
         [Test]
@@ -57,7 +57,7 @@ namespace BowlingGame.Kata
             _game.Roll(10);
             _game.Roll(0);
             _game.Roll(8);
-            Assert.AreEqual(_game.Score(), 18);
+            Assert.AreEqual(18, _game.Score());
         }
 
         [Test]
@@ -67,7 +67,7 @@ namespace BowlingGame.Kata
             _game.Roll(7);
             _game.Roll(3);
             _game.Roll(8);
-            Assert.AreEqual(_game.Score(), 26);
+            Assert.AreEqual(26, _game.Score());
         }
 
         private void ThrowMultipleRolls(int totalRolls, int pins)
